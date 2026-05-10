@@ -1,3 +1,49 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ================= RESET ================= */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  background: #f8fafc;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* FIX ROOT APP SCROLL ISSUE */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* FIX MAIN CONTENT */
+main {
+  flex: 1;
+  width: 100%;
+  padding-top: 80px; /* navbar space */
+  overflow-x: hidden;
+}
+
+/* FIX ALL IMAGES (BIG IMAGE ISSUE FIX 🔥) */
+img {
+  max-width: 100% !important;
+  height: auto !important;
+  display: block;
+}
+
+/* FIX SVG / ICON SIZE ISSUE 🔥 */
+svg {
+  width: 1.25rem !important;
+  height: 1.25rem !important;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* GLOBAL BOX MODEL */
+* {
+  box-sizing: border-box;
+}
